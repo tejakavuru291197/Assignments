@@ -1,0 +1,205 @@
+1)  a)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pawan
+{
+    internal class Calculator
+    {
+        static void Main(string[] args)
+           {
+                Console.WriteLine("Enter number:");
+                int a = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("Enter another number:");
+                int b = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("1.Addition");
+                Console.WriteLine("2.Subtraction");
+                Console.WriteLine("3.Multiplication");
+                Console.WriteLine("4.Division");
+                int c = Convert.ToInt16(Console.ReadLine());
+                switch (c)
+                {
+                    case 1:
+                        Console.WriteLine("Addition of two numbers:" + (a + b));
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Subtraction of two numbers" + (a - b));
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Multiplication of two numbers" + (a * b));
+                        break;
+
+                    case 4:
+                        Console.WriteLine("divison of two numbers" + (a / b));
+                        break;
+
+                }
+                Console.ReadLine();
+            }
+    }
+}
+
+
+
+1)  b)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pawan
+{
+    internal class Average
+    {
+       static void Main(string[] args)
+        {
+            int[] arr = new int[5];
+            int max = arr[0];
+            int total = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("Enter " + i + " Student Marks:");
+                arr[i] = int.Parse(Console.ReadLine());
+                total = total + arr[i];
+            }
+
+
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > max)
+                    max = arr[i];
+            }
+            int avg = total / arr.Length;
+            Console.WriteLine("Avg Of Students Marks {0}", avg);
+            Console.WriteLine("highest marks is {0}", max);
+
+
+
+
+            Console.ReadLine();
+
+
+
+
+
+
+
+        }
+    }
+}
+
+
+
+1)  c)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pawan
+{
+    internal class ParamArray
+    {
+      public static int sum(int[] arrr)
+        {
+            int total = 0;
+            for (int i = 0; i < arrr.Length; i++)
+            {
+                total += arrr[i];
+            }
+            return total;
+        }
+        public static void Main()
+        {
+            int[] arr = new int[5] { 5, 9, 7, 2, 3 };
+            Console.WriteLine("total sum of array is {0}", sum(arr));
+            Console.ReadLine();
+
+        }
+    }
+
+}
+
+
+1)  d)
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pawan
+{
+    internal class Swapping
+    {
+        public static void Swap()
+        {
+            int a = 5, b = 6, temp;
+            Console.WriteLine("Before Swapping a= {0}, b= {1}", a, b);
+            temp = a;
+            a = b;
+            b = temp;
+            Console.WriteLine("After Swapping a= {0}, b= {1}", a, b);
+        }
+        public static void Main()
+        {
+            Swap();
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+1)  e)
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pawan
+{
+    internal class AreaAndCircum
+    {
+        public static void CircumCircle()
+        {
+            Console.WriteLine("Enter The Radius Of The Circle :");
+            double r = Convert.ToDouble(Console.ReadLine());
+            double AreaOfCircle = Math.PI * r * r;
+            double CircumferenceOfCircle = Math.PI * 2 * r;
+            Console.WriteLine("Area Of The Circle is :" + AreaOfCircle);
+            Console.WriteLine("Circumference Of The Circle is :" + CircumferenceOfCircle);
+            Console.ReadLine();
+        }
+        public static void Main(string[] arg)
+        {
+            CircumCircle();
+            /*console.WriteLine(AreaAndCircum.CircumCircle());*/
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
